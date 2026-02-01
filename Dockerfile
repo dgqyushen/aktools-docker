@@ -1,12 +1,10 @@
-FROM ubuntu
+FROM python:3-slim
 
 LABEL org.opencontainers.image.authors="dgqyushen <2446682260@qq.com>"
 
-
 RUN \
-    apt-get update && apt -y install python3 pip python-is-python3 && \
-    pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple && \
-    pip install aktools
+    pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/ && \
+    pip install --no-cache-dir aktools
 
 EXPOSE 8061
 
