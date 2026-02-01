@@ -2,9 +2,7 @@ FROM python:3-slim
 
 LABEL org.opencontainers.image.authors="dgqyushen <2446682260@qq.com>"
 
-RUN \
-    pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/ && \
-    pip install --no-cache-dir aktools
+RUN pip install --no-cache-dir aktools
 
 EXPOSE 8061
 
