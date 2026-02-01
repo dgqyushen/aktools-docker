@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  aktools:
+    image: dgqyushen/aktools:latest
+    restart: unless-stopped
+    logging:
+      driver: json-file
+      options:
+        max-size: 1m
+    network_mode: host
