@@ -1,11 +1,11 @@
-version: '3'
-
 services:
   aktools:
     image: dgqyushen/aktools:latest
+    container_name: aktools
     restart: unless-stopped
+    ports:
+      - "8061:8061"
     logging:
       driver: json-file
       options:
         max-size: 1m
-    network_mode: host
