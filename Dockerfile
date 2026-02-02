@@ -4,8 +4,8 @@ LABEL org.opencontainers.image.authors="dgqyushen <2446682260@qq.com>"
 
 RUN pip install --no-cache-dir aktools
 
-EXPOSE 8061
+EXPOSE 8080
 
 # HEALTHCHECK CMD nc -z localhost 8080 || exit 1
 
-CMD ["python", "-m", "aktools", "-P", "8061"]
+CMD ["python", "-m", "aktools", "-P", "8080"]
