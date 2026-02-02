@@ -8,4 +8,4 @@ EXPOSE 8080
 
 # HEALTHCHECK CMD nc -z localhost 8080 || exit 1
 
-CMD ["python", "-m", "aktools", "-P", "8080"]
+CMD ["python", "-m", "aktools"]
